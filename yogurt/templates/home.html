@@ -1,8 +1,11 @@
 {% extends 'index.html' %}
-
+{% load static %}
+{% static "img" as baseUrl %}
 {% block content %}
 
+
 {% for pro in prod %}
+
 <div class="destination item">
     <div class="destination_image">
         <img src="{{pro.img.url}}" alt="">

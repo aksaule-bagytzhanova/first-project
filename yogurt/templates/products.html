@@ -4,4 +4,26 @@
 
 <h1>I am products page</h1>
 
+{% for pro in prod %}
+
+<div>
+    <div>
+        <img src="{{pro.img.url}}" alt="">
+        {% if pro.offer %}
+        <div class="spec_offer text-center"><a href="#">Special Offer</a></div>
+        {% endif %}
+    </div>
+    <div>
+        <div><a href="">{{pro.name}}</a>
+        </div>
+        <div>
+            <p>{{pro.desc}}</p>
+        </div>
+        <div>From ${{pro.price}}</div>
+    </div>
+</div>
+
+{% endfor %}
+
+
 {% endblock %}
